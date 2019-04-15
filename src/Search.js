@@ -12,7 +12,7 @@ class Search extends Component {
   componentDidMount() {
     $.ajax({
       method: 'post',
-      url: 'https://data.orghunter.com/v1/categories?user_key=3bf0ab40cbe750cb184fef3e0e504c16'
+      url: 'https://cors-anywhere.herokuapp.com/https://data.orghunter.com/v1/categories?user_key=3bf0ab40cbe750cb184fef3e0e504c16'
     })
     .done((response) => {
       this.setState({
@@ -28,7 +28,7 @@ class Search extends Component {
     this.setState({submitted: true});
     $.ajax({
       method: 'post',
-      url: 'https://data.orghunter.com/v1/charitysearch?user_key=3bf0ab40cbe750cb184fef3e0e504c16&category=' + this.state.selectedCategory + '&state=' + this.state.selectedState
+      url: 'https://cors-anywhere.herokuapp.com/https://data.orghunter.com/v1/charitysearch?user_key=3bf0ab40cbe750cb184fef3e0e504c16&category=' + this.state.selectedCategory + '&state=' + this.state.selectedState
     })
     .done((response) => {
       console.log(response)
@@ -91,7 +91,7 @@ class Search extends Component {
   getDetails = (e, ein) => {
     $.ajax({
       method: 'get',
-      url: `https://data.orghunter.com/v1/charitybasic?user_key=3bf0ab40cbe750cb184fef3e0e504c16&ein=${ein}`
+      url: `https://cors-anywhere.herokuapp.com/https://data.orghunter.com/v1/charitybasic?user_key=3bf0ab40cbe750cb184fef3e0e504c16&ein=${ein}`
     })
     .done((response) => {
       console.log(response)
