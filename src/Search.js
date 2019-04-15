@@ -112,18 +112,14 @@ class Search extends Component {
         <option value={category.categoryId}>{category.categoryDesc}</option>
       )
     })
-    // let user = function (){
-    //   return(
-    //     <p>{this.state.user}</p>
-    //   )
-    // }
+
     return (
       <div className="searchBox">
-        <input type="text" placeholder="Enter Username" onChange={this.handleLoginChange}></input>
+        {/* <input type="text" placeholder="Enter Username" onChange={this.handleLoginChange}></input>
         <br/>
         <input type="text" placeholder="Enter Password" onChange={this.handlePasswordChange}></input>
         <br/>
-        <button onClick={e => this.login()}>Login</button>
+        <button onClick={e => this.login()}>Login</button> */}
         <br/><br/><br/>
         <select onChange={this.handleSelectedCategoryChange}>
           {categories}
@@ -200,7 +196,7 @@ class Search extends Component {
           <p className="charity-address">Address: <br></br> {this.state.selectedCharity.street}</p>
           <p className="charity-address">{this.state.selectedCharity.city}</p>
           <p className="charity-adress">{this.state.selectedCharity.state} {this.state.selectedCharity.zipCode}</p>
-          <button onClick={e => this.saveData(e, this.state.selectedCharity.name)}>Save Charity</button>
+          {/* <button onClick={e => this.saveData(e, this.state.selectedCharity.name)}>Save Charity</button> */}
         </div>
       </div>
     )
